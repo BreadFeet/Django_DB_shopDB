@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Detail</title>
+</head>
+<body>
+    <h1>Customer Detail Page</h1>
+        <h3>{{cust.id}}</h3>
+        <h3>{{cust.pwd}}</h3>
+        <h3>{{cust.name}}</h3>
+        <a href="{% url 'custdelete' %}?id={{cust.id}}">DELETE</a>
+        <a href="{% url 'custupdate' %}?id={{cust.id}}">UPDATE</a>
+</body>
+</html>

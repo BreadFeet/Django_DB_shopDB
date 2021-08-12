@@ -1,0 +1,4 @@
+[13/Aug/2021 06:48:29] DEBUG [users: 130] id01, pants5, 50000, 30━C, Sunny
+[13/Aug/2021 06:54:18] WARNING [users: 130] id01, pants5, 50000, 30━C, Sunny
+WARNING id01, pants5, 50000, 30━C, Sunny
+[13/Aug/2021 07:04:16] DEBUG [users: 130 匝] id01, pants5, 50000, 30━C, Sunny

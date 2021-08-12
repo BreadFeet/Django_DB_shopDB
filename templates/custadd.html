@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Customer Add Page</h1>
+    <form action="{% url 'custaddimpl' %}" method="post">   <!--action="custaddimpl" url로 불러올 수도 있음-->
+        {% csrf_token %}
+        ID <input type="text" name="id"><br>
+        PWD <input type="password" name="pwd"><br>
+        NAME <input type="text" name="name"><br>
+        <input type="submit" value="ADD">
+    </form>
+</body>
+</html>

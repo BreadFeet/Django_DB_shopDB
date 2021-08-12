@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Update Page</title>
+</head>
+<body>
+    <h1>Item Update Page</h1>
+    <form action="{% url 'itemupdateimpl' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}    <!--Item update는 보안 내용은 아니지만 파일 전송때문에 post 방식-->
+        <input type="hidden" name="id" value="{{item.id}}">    <!--hidden: 전송할 때 필요한 내용이지만 화면에는 표시 안해야 하기 때문-->
+        NAME <input type="text" name="name" value="{{item.name}}"><br>
+        PRICE <input type="number" name="price" value="{{item.price}}"><br>
+        IMG <input type="file" name="newimg" value="까꿍.jpg"><br>   <!--이미지 선택하면 그 이미지파일을 전송-->
+        <input type="hidden" name="oldimgname" value="{{item.imgname}}">    <!--이미지를 선택하지 않는 경우 대비해서 기존 이미지 이름을 전송-->
+        <input type="submit" value="UPDATE">
+    </form>
+</body>
+</html>

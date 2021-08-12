@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>ITEM ADD Page</h1>
+    <form action="{% url 'itemaddimpl' %}" method="post" enctype="multipart/form-data">   <!--파일 시스템 전송할 때만 필요한 부분-->
+        {% csrf_token %}
+        NAME <input type="text" name="name"><br>
+        PRICE <input type="number" name="price"><br>
+        IMG <input type="file" name="img"><br>
+        <input type="submit" value="REGISTER">
+    </form>
+</body>
+</html>

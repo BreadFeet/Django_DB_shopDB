@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3 > a > img {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ITEM LIST Page</h1>
+    {% for i in ilist %}
+        <h3>
+            <a href="{% url 'itemdetail' %}?id={{i.id}}">
+            <img src="static/img/{{i.imgname}}">{{i.name}} {{i.price}} {{i.regdate}}
+            </a>
+        </h3>    <!--% static % 으로 사진이 안뜬다!-->
+    {% endfor %}
+</body>
+</html>

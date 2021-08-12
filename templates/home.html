@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    {% if request.session.logincust == None %}
+        <a href="{% url 'login' %}">LOGIN</a>    <!--로그인 안했으면 보이는 부분-->
+    {% else %}
+        {{request.session.logincust.name}}님 반갑습니다.
+        <a href="{% url 'logout' %}">LOGOUT</a>   <!--로그인 되어있으면 보이는 부분-->
+        <a href="{% url 'cartlist' %}?custid={{request.session.logincust.id}}">CART</a>
+    {% endif %}
+    <h2><a href="{% url 'custlist'%}">Customer List</a></h2>
+    <h2><a href="{% url 'custadd'%}">Customer Add</a></h2>
+    <h2><a href="{% url 'itemlist'%}">Item List</a></h2>
+    <h2><a href="{% url 'itemadd'%}">Item Add</a></h2>
+</body>
+</html>

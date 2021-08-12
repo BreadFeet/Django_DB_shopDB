@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart List</title>
+    <style>
+        img {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cart List Page</h1>
+    {% for c in cartlist %}
+        <h3><img src="static/img/{{c.imgname}}">
+            {{c.custname}}, {{c.itemname}}, {{c.price}}, {{c.num}}, {{c.total}}, {{c.regdate}}</h3>
+    {% endfor %}
+</body>
+</html>

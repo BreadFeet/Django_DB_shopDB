@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+</head>
+<body>
+    <h1>Customer List Page</h1>
+    {% for c in clist %}
+        <h3><a href="{% url 'custdetail' %}?id={{c.id}}">{{c.id}}  {{c.name}}</a></h3>  <!--id마다 다른 url을 만든다-->
+    {% endfor %}
+</body>
+</html>
